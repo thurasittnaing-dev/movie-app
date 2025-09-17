@@ -1,6 +1,6 @@
 import { icons } from '@/constants/icons';
 import React from 'react';
-import { Image, Linking, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Linking, TouchableOpacity, View } from 'react-native';
 
 // Utility function
 const getOfficialTrailer = (trailers: any) => {
@@ -39,10 +39,7 @@ const YouTubeButton = ({ trailers }: any) => {
 
   return youtubeUrl ? (
     <TouchableOpacity onPress={openYouTube}>
-      <View className="flex flex-row">
-        <Image source={icons.youtube} className="size-5" />
-        <Text className="text-light-200 ml-2">Watch the Trailer</Text>
-      </View>
+      <Image source={icons.youtube} className="size-8 my-3" />
     </TouchableOpacity>
   ) :  (
     <View className=""></View>

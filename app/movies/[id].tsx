@@ -28,7 +28,8 @@ const MovieDetail = () => {
             </View>
 
             <View className='flex-col items-start justify-center mt-5 px-5'>
-                <Text className="text-white font-bold text-xl">{movie?.title}</Text>
+              <Text className="text-white font-bold text-xl">{movie?.title}</Text>
+              <YouTubeButton  trailers={movie?.trailers} />
 
                 <View className='flex-row items-center gap-x-1 mt-2'>
                   <Text className='text-orange-500 text-sm'>{movie?.release_date?.split('-')[0]}</Text>
@@ -58,10 +59,6 @@ const MovieDetail = () => {
               </View>
 
               <MovieInfo label="Production Companies" value={movie?.production_companies?.map((c)=> c.name).join(' | ') || 'N/A'} />
-
-              <View className='absolute top-0 right-1'>
-                <YouTubeButton  trailers={movie?.trailers} />
-              </View>
             </View>
 
 
